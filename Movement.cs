@@ -40,6 +40,8 @@ public class Movement : MonoBehaviour {
 		}
 
 		velocity = Vector3.ClampMagnitude(velocity,maxSpeed);
+		/* This does not work and need reworking */
+		rigidbody2D.AddForce (new Vector2 (velocity.x,velocity.y));
 
 		float angle = 0f;
 		if(velocity.y < 0)
