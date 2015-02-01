@@ -40,5 +40,16 @@ public class Movement : MonoBehaviour {
 
 		velocity = Vector3.ClampMagnitude(velocity,maxSpeed);
 		transform.position = transform.position + velocity * Time.deltaTime;
+
+		float angle = 0f;
+		if(velocity.y < 0)
+		{
+			angle = Mathf.Lerp(0,-45,-velocity.y/maxSpeed);
+		}
+		if(velocity.y > 0)
+		{
+			angle = Mathf.Lerp(0,45,velocity.y/maxSpeed);
+		}
+		transform.rotation = Quaternion.Euler (0, 0, angle);
 	}
 }
