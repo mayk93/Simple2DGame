@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Looper : MonoBehaviour {
 
-	int numberOfBackGroundObjects = 6;
+	int numberOfBackGroundObjects = 7;
 	// Use this for initialization
 	void Start () {
 	
