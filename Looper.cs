@@ -16,7 +16,6 @@ public class Looper : MonoBehaviour {
 
 	void OnTriggerEnter2D ( Collider2D collider )
 	{
-		Debug.Log ( "Triggered" + collider.name );
 		float widthOfBackGroundObject = ((BoxCollider2D)collider).size.x;
 
 		Vector3 backgroundObjectPosition = collider.transform.position;
