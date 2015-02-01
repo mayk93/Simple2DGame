@@ -4,7 +4,6 @@ using System.Collections;
 public class Movement : MonoBehaviour {
 
 	public Vector3 velocity = Vector3.zero;
-	public Vector3 gravity;
 	public Vector3 flapVelocity;
 
 	public float maxSpeed = 1f;
@@ -30,8 +29,6 @@ public class Movement : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-		velocity = velocity + gravity * Time.deltaTime;
-
 		if(hasFlapped == true)
 		{
 			hasFlapped = false;
@@ -43,7 +40,6 @@ public class Movement : MonoBehaviour {
 		}
 
 		velocity = Vector3.ClampMagnitude(velocity,maxSpeed);
-		transform.position = transform.position + velocity * Time.deltaTime;
 
 		float angle = 0f;
 		if(velocity.y < 0)
