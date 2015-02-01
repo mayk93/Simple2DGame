@@ -8,7 +8,6 @@ public class Movement : MonoBehaviour {
 	public Vector3 flapVelocity;
 
 	public float maxSpeed = 1f;
-	public float forwardSpeed = 1f;
 
 	bool hasFlapped = false;
 
@@ -31,7 +30,6 @@ public class Movement : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-		velocity.x = forwardSpeed;
 		velocity = velocity + gravity * Time.deltaTime;
 
 		if(hasFlapped == true)
